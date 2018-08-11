@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ActiveListPage } from '../active-list/active-list';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,14 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+	today = Date.now();
 
-  }
+
+	goToActive() {
+		this.navCtrl.push(ActiveListPage);
+	}
+
+	constructor(public navCtrl: NavController) {
+	}
 
 }
